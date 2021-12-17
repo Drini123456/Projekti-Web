@@ -44,6 +44,15 @@ ul li:hover{
     height: 450px;
 
 }
+.slideshow-container{
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.dot{
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
 
 .img{
     background-color: rgb(7, 169, 197);
