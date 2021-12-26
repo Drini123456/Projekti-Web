@@ -88,6 +88,7 @@ flex-direction: column;
     border: 1pxsolid #0053a0;   
      margin-left: 80%;
      color: white;
+    
 }
 .button1:hover{
     box-shadow: 3px 3px 3px #0053a0;

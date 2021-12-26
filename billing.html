@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgray;
+}
+
+.header {
+  overflow: hidden;
+  background-color: darkred;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 2px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: black;
+  color: bl ue;
+		transition: 0.6s ease;
+		color: white;
+		animation: jump-out 0.6s ease forwards;
+	}
+
+
+
+
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+
+  
+
+</style>
+</head>
+<body>
+  <link rel="stylesheet" href="slider.css">
+  <div class="header">
+    <a href="homepage.html" class="logo">ONLINE SHOP - DG</a>
+    <div class="header-right">
+      
+      <a href="homepage.html">Home</a> 
+      
+     
+      <a href="about.html">About</a> 
+     
+       <a href="Kontakti.html">Contact</a>
+      
+    </div>
+  </div>
+<div style="padding-left:20px">
+
+
+
+</div>
+
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="billing.css">
+ 
+<trupi>
+    <div class="container">
+        <h1>Konfirmo Pagesen</h1>
+        <div class="first-row">
+            <div class="owner">
+                <h3>Emri & Mbiemri</h3>
+                <div class="input-field">
+                    <input type="text" id="cname" name="cardname" placeholder="Filan Fisteku">
+                </div>
+            </div>
+            <div class="cvv">
+                <h3>CVV</h3>
+                <div class="input-field">
+                    <input type="password" id="cvv" name="cvv" placeholder="111" maxlength="3">
+
+                </div>
+            </div>
+        </div>
+        <div class="second-row">
+            <div class="card-number">
+                <h3>Card Number</h3>
+                <div class="input-field">
+                    <input type="text" id="cardNumber" name="cardnumber" placeholder="1111-2222-3333-4444" maxlength="19">
+
+                </div>
+            </div>
+        </div>
+        <div class="third-row">
+            <h3>Valid Thru</h3>
+            <div class="selection">
+                <input type="text" id="cardExpiration" class="inputet" maxlength="5" placeholder="MM/YY"></input>
+                <!---<div class="date">
+                    <select name="months" id="months">
+                        <option value="Jan">Jan</option>
+                        <option value="Feb">Feb</option>
+                        <option value="Mar">Mar</option>
+                        <option value="Apr">Apr</option>
+                        <option value="May">May</option>
+                        <option value="Jun">Jun</option>
+                        <option value="Jul">Jul</option>
+                        <option value="Aug">Aug</option>
+                        <option value="Sep">Sep</option>
+                        <option value="Oct">Oct</option>
+                        <option value="Nov">Nov</option>
+                        <option value="Dec">Dec</option>
+                      </select>
+                      <select name="years" id="years">
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                      </select>
+                </div>-->
+                <div class="cards">
+                    <img src="mc.png" alt="">
+                    <img src="vi.png" alt="">
+                </div>
+            </div>    
+        </div>
+        <div class = "submit">
+            <a href="submit.html"> <input type="button" value="Confirm" class="button1" id="buttoniii"></a>
+        </div>
+        <label id="label"></label>
+
+    </div>
+</trupi>
+</html>
+<div class="footer2">
+    <div class = "contact">
+      <h1>Follow us on : Facebook  & Twitter & Instagram</h1>
+    </div>
+     <br>
+  
+     <div class="images">
+        <a href="https://www.facebook.com/drin.mehmeti.79" target ="_blank">
+          <img src="facebook1.png" alt="" width="100px"; height="100px">
+        </a>
+        <a href="https://www.twitter.com/GranitDemirii" target ="_blank">
+          <img src="twitter1.png" alt="" width="90px"; height="90px">
+        </a>
+        <a href="https://www.instagram.com/granitdemiri" target ="_blank">
+          <img src="instagram1.png" alt="" width="100px"; height="100px"> 
+        </a>
+       </div>
+   </div>
+  
+   
+  </div>
+  
+  
+  
+  </div>
+<script>
+    var vazhdo = document.getElementById("buttoniii");
+    
+    vazhdo.addEventListener("click",function(event) {
+        var LabelValidimi = document.getElementById('label');
+        var cardExpirationV = /^((0[1-9])|(1[0-2]))\/(\d{2})$/;
+        var cardExpiration = document.getElementById("cardExpiration").value;
+
+        if(cardExpiration == ""){
+                LabelValidimi.innerHTML ="Ju lutem plotesoni kolonen  <b>Valid Thru !! </b>  ";
+                LabelValidimi.style.color = "red";
+                event.preventDefault();
+            }
+            else{
+                if(cardExpirationV.test(cardExpiration) == true){
+    
+                }
+                else{
+                    LabelValidimi.innerHTML = "Ju lutem plotesoni kolonen <b> Valid Thru</b> ne menyre korrekte !!";
+                    LabelValidimi.style.color = "red";
+                    event.preventDefault();
+                }
+            }
+    })
+  
+            var vazhdo = document.getElementById("buttoniii");
+    
+    vazhdo.addEventListener("click",function(event) {
+        var LabelValidimi = document.getElementById('label');
+        var nameV = /([A-Z][a-z]{2,9})/;
+         var name = document.getElementById("cname").value;
+        if(name == ""){
+                LabelValidimi.innerHTML ="Ju lutem plotesoni kolonen <b> Emri dhe Mbiemri </b> !! ";
+                LabelValidimi.style.color = "red";
+                event.preventDefault();
+            }
+            else{
+                if(nameV.test(name) == true){
+    
+                }
+                else{
+                    LabelValidimi.innerHTML = "Ju lutem plotesoni kolonen  <b> Emri dhe Mbiemri </b> ne menyre korrekte !!";
+                    LabelValidimi.style.color = "red";
+                    event.preventDefault();
+                }
+            }
+    })
+    
+    var vazhdo = document.getElementById("buttoniii");
+    
+    vazhdo.addEventListener("click",function(event) {
+        var LabelValidimi = document.getElementById('label');
+        var cardV = /^(?:[4-5][0-9]{12}(?:[0-9]{3})?)$/;
+                 var card = document.getElementById("cardNumber").value;
+        if(card == ""){
+                LabelValidimi.innerHTML ="Ju lutem mbusheni kolonen<br> Numri Karteles </b> ";
+                LabelValidimi.style.color = "red";
+                event.preventDefault();
+            }
+            else{
+                if(cardV.test(card) == true ){
+    
+                }
+                else{
+                    LabelValidimi.innerHTML = "Ju lutem mbusheni kolonen 'Numri Karteles' ne menyre te sakte <br> Kartela Visa permban 16 numra dhe fillon me 4";
+                    LabelValidimi.style.color = "red";
+                    event.preventDefault();
+                }
+                
+            }
+    })  
+
+     var vazhdo = document.getElementById("buttoniii");
+    
+    vazhdo.addEventListener("click",function(event) {
+        var LabelValidimi = document.getElementById('label');
+        var ccV =/^[0-9]{3, 4}$;/
+         var cc = document.getElementById("ccv").value;
+        if(cc == ""){
+                LabelValidimi.innerHTML ="Ju lutem mbusheni kolonen <br> CCV  </b> ";
+                LabelValidimi.style.color = "red";
+                event.preventDefault();
+            }
+            else{
+                if(ccV.test(cc) == true){
+    
+                }
+                else{
+                    LabelValidimi.innerHTML = "Ju lutem mbusheni kolonen ne menyre te sakte <br> , Kolona CCV duhet te permbaje 3 ose 4 numra ";
+                    LabelValidimi.style.color = "red";
+                    event.preventDefault();
+                }
+            }
+    })
+
+</script>
+  </body>
