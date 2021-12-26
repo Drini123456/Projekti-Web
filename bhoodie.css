@@ -78,7 +78,9 @@
   width: 45%;
 display: flex;
 text-align: center;
+flex-direction: column;
 }
+
 .button1{
     width: 200px;
     height: 50px;
@@ -90,7 +92,8 @@ text-align: center;
 .button1:hover{
     box-shadow: 3px 3px 3px #0053a0;
     background-color: darkred;
-    color: white
+    color: white;
+    
 
 }
 .size{
