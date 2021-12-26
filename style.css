@@ -41,19 +41,15 @@
     justify-content: space-evenly;
     color: black;
     font-family: 'Times New Roman', Times, serif;
-<<<<<<< HEAD
     font-size: 18px;
-=======
     font-size: 20px;
->>>>>>> 95194ab4ae97b2f89993ad71bc976e46d1345ea2
     font-weight: bold;
 }
 
 
 
 .footer2{
-    margin-top: 70px;
-    background-color: darkred;
+    background-color: rgb(134, 46, 46);
     height: 250px;
     
 }
