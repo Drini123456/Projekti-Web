@@ -73,7 +73,8 @@ ul li:hover{
     justify-content: space-evenly;
     color: black;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 17px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .section2{
