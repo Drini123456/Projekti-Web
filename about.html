@@ -2,150 +2,145 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <style>
-* {box-sizing: border-box;}
-
-body { 
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: lightgrey;
-}
-
-.header {
-  overflow: hidden;
-  background-color: darkred;
-  padding: 20px 10px;
-}
-
-.header a {
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px; 
-  line-height: 25px;
-  border-radius: 2px;
-}
-
-.header a.logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.header a:hover {
-  background-color: black;
-  color: bl ue;
-		transition: 0.6s ease;
-		color: white;
-		animation: jump-out 0.6s ease forwards;
-	}
-
-
-
-
-
-.header-right {
-  float: right;
-}
-
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
+  * {box-sizing: border-box;}
+  
+  body1{ 
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgrey;
   }
+  
+  .header {
+    overflow: hidden;
+    background-color: darkred;
+    padding: 20px 10px;
+  }
+  
+  .header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 2px;
+  }
+  
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .header a:hover {
+    background-color: black;
+    color: blue;
+      transition: 0.6s ease;
+      color: white;
+      animation: jump-out 0.6s ease forwards;
+    }
+  
+  
+  
+  
   
   .header-right {
-    float: none;
+    float: right;
   }
-}
-
   
-
-</style>
-</head>
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .header-right {
+      float: none;
+    }
+  }
+  
+    
+  
+  </style>
+  </head>
+  <body1>
+  <link rel="stylesheet" href="slider.css">
+    <div class="header">
+      <a href="homepage.html" class="logo">ONLINE SHOP - DG</a>
+      <div class="header-right">
+        
+        <a href="homepage.html">Home</a> 
+          
+          <a href="account.html">Account</a></li>
+         
+          <a href="about.html">About</a> 
+         
+           <a href="Kontakti.html">Contact</a>
+        
+      </div>
+    </div>
+  
 <body>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="slideshowstyle.css">
+    <link rel="stylesheet"  href="style.css">
+    <link rel="stylesheet"  href="slider.css">
+    <link rel="stylesheet"  href="about.css">
 
-<div class="header">
-  <a href="homepage.html" class="logo">ONLINE SHOP - DG</a>
-  <div class="header-right">
-   
-     <a href="homepage.html">Home</a>
-   
-   
-      <a href="about.html">About</a> 
-  
-   
-    <a href="Kontakti.html">Contact</a> 
-   
+
+
+</div>
+<div class="about-section" >
+ <div class ="inner-container">
+<h1>
+  About Us
+  <div class ="border"></div>
+
+</h1>
+<p class = "text">
+  Online Shop DG, Inc.është një nga kompanitë e Shërbimeve të Internetit me rritjen më të shpejtë në Evropë, dhe vazhdon të rritet në mënyrë eksponenciale vit pas viti. DG është kompani lidere e shitjes online, marketingut online, është platformë e cila konkretisht permban mbathjet me moderne. DG është gjithashtu një nga kompanitë më të financuara me produkte në Evropë.
+</p>
+
+<button>Read More</button>
+
+
+
+
+
+ </div>
+
+
+
+
+</div>
+<div class="footer2">
+  <div class = "contact">
+    <h1>Follow us on : Facebook  & Twitter & Instagram</h1>
   </div>
+   <br>
+
+   <div class="images">
+      <a href="https://www.facebook.com/drin.mehmeti.79" target ="_blank">
+        <img src="facebook1.png" alt="" width="100px"; height="100px">
+      </a>
+      <a href="https://www.twitter.com/GranitDemirii" target ="_blank">
+        <img src="twitter1.png" alt="" width="90px"; height="90px">
+      </a>
+      <a href="https://www.instagram.com/granitdemiri" target ="_blank">
+        <img src="instagram1.png" alt="" width="100px"; height="100px"> 
+      </a>
+     </div>
+ </div>
+
+ 
 </div>
 
 
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace("active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-        }
-        </script>
-         
-         <div class="about-section">
-            <h1>About Us Page</h1>
-            <p>Some text about who we are and what we do.</p>
-            <p>Resize the browser window to see that this page is responsive by the way.</p>
-          </div>
+
+</div>
+</body>
 
 
-            <div class="footer2">
-                <div class = "contact">
-                  <h1>Follow us on : Facebook  & Twitter & Instagram</h1>
-                </div>
-                 <br>
-              
-                 <div class="images">
-                    <a href="https://www.facebook.com/drin.mehmeti.79" target ="_blank">
-                      <img src="facebook1.png" alt="" width="100px"; height="100px">
-                    </a>
-                    <a href="https://www.twitter.com/GranitDemirii" target ="_blank">
-                      <img src="twitter1.png" alt="" width="90px"; height="90px">
-                    </a>
-                    <a href="https://www.instagram.com/granitdemiri" target ="_blank">
-                      <img src="instagram1.png" alt="" width="100px"; height="100px"> 
-                    </a>
-                   </div>
-               </div>
-              
-               
-              </div>
-              
-              
-              
-              </div>
-              </body>
               
