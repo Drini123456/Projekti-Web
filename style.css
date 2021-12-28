@@ -49,8 +49,16 @@
 
 
 .footer2{
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 96cac7d96db4692af8a9bbca71a3017cf4f50fc0
     background-color: darkred;
+=======
+    background-color: rgb(134, 46, 46);
+>>>>>>> ea089f8a4507938331850ae669e60561e3fde25e
     height: 250px;
+    margin-top: 98px;
     
 }
 
