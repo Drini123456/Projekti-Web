@@ -10,9 +10,13 @@
    margin-top: 100px;
    margin-bottom: 100px;
     margin-left: auto;
-    margin-right: auto;
-    
+    margin-right: auto;    
 }
+.container:hover{
+    box-shadow: 3px 3px 3px darkred;
+
+}
+
 .h1{
     display: flex;
     justify-content: center;

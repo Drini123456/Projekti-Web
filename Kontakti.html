@@ -8,7 +8,7 @@
 body { 
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: lightgrey;
+  background-color: rgb(234, 239, 249);
 }
 
 .header {
@@ -66,14 +66,15 @@ body {
 </style>
 </head>
 <body>
-<link rel="stylesheet" href="slider.css">
+
 <link rel="stylesheet" href="style2.css">
 <div class="header">
   <a href="homepage.html" class="logo">ONLINE SHOP - DG</a>
   <div class="header-right">
    
      <a href="homepage.html">Home</a> 
-  
+     <a href="account.html">Account</a></li>
+
   
       <a href="about.html">About</a> 
    
@@ -84,90 +85,93 @@ body {
 </div>
 
 
-    <h3 style="font-family: Rainbow Bridge Personal Use; font-size: 50px; text-align: center;" >Contact Us</h3>
+<h3 style="font-family: Rainbow Bridge Personal Use; font-size: 50px; text-align: center;" >Contact Us</h3>
 
-    <div class="container">
-        <form action="action_page.php">
+<div class="container">
+  
+     <div class = "container2" >
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="kosovo">Kosovo</option>
+        <option value="Albania">Albania</option>
+        <option value="North Macedonia">North Macedonia</option>
+        <option value="Greece">Greece</option>
+        <option value="Germany">Germany</option>
+        <option value="Italy">Italy</option>
+        <option value="Spain">Spain</option>
+      </select>
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
       
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      
-          <label for="country">Country</label>
-          <select id="country" name="country">
-            <option value="kosovo">Kosovo</option>
-            <option value="Albania">Albania</option>
-            <option value="North Macedonia">North Macedonia</option>
-            <option value="Greece">Greece</option>
-            <option value="Germany">Germany</option>
-            <option value="Italy">Italy</option>
-            <option value="Spain">Spain</option>
-          </select>
-      
-          <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      
-          <input type="submit" value="Submit">
-      
-        </form>
-      </div>
-        
+      <a onclick="contactbtn()"  > <input type="submit" value="Submit"></a>  
+    </div>
+  </div>
+  
 
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace("active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-        }
-        </script>
-        
+ <script>
+   
+function contactbtn(){ 
+var name = document.getElementById('fname').value;
+var lastname = document.getElementById('lname').value;
+var subjekt = document.getElementById('subject').value;
+
+const regexName =  /^[A-Z]{1}.{2,15}$/;
+const regexLastName = /^[A-Z]{1}.{2,15}$/;
+const regexSubject = /^.{1,100}$/;
+
+  if(!regexName .test(name)){
+    alert("Write another name!");
+    return false;
+}
+else if(!regexLastName.test(lastname)){
+    alert("Write another LastName!");
+    return false;
+}
+else if(!regexSubject.test(subjekt)){
+    alert("Write another message!");
+    return false;
+}
+else{
+    alert("Mesazhi u dergua!");
+    return true;
+}
+}
+    </script>
+      
+     
 
 
-            <div class="footer2">
-                <div class = "contact">
-                  <h1>Follow us on : Facebook  & Twitter & Instagram</h1>
-                </div>              
-                 <div class="images">
-                    <a href="https://www.facebook.com/drin.mehmeti.79" target ="_blank">
-                      <img src="facebook1.png" alt="" width="100px"; height="100px">
-                    </a>
-                    <a href="https://www.twitter.com/GranitDemirii" target ="_blank">
-                      <img src="twitter1.png" alt="" width="90px"; height="90px">
-                    </a>
-                    <a href="https://www.instagram.com/granitdemiri" target ="_blank">
-                      <img src="instagram1.png" alt="" width="100px"; height="100px"> 
-                    </a>
-                   </div>
+        <div class="footer2">
+            <div class = "contact">
+              <h1>Follow us on : Facebook  & Twitter & Instagram</h1>
+            </div>
+             <br>
+          
+             <div class="images">
+                <a href="https://www.facebook.com/drin.mehmeti.79" target ="_blank">
+                  <img src="facebook1.png" alt="" width="100px"; height="100px">
+                </a>
+                <a href="https://www.twitter.com/GranitDemirii" target ="_blank">
+                  <img src="twitter1.png" alt="" width="90px"; height="90px">
+                </a>
+                <a href="https://www.instagram.com/granitdemiri" target ="_blank">
+                  <img src="instagram1.png" alt="" width="100px"; height="100px"> 
+                </a>
                </div>
-              
-               
-              </div>
-              
-              
-              
-              </div>
-              </body>
-              
+           </div>
+          
+           
+          </div>
+          
+          
+          
+          </div>
+          </body>
+          
