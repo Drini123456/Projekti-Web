@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<body>
+<link rel="stylesheet" href="../css/style2.css">
+<?php
+  include("../html/header.html");
+  ?>
+<h3 style="font-family: Rainbow Bridge Personal Use; font-size: 50px; text-align: center;" >Contact Us</h3>
+<form action="InsertKontakti.php" method="post">
+<div class="container">
+  
+     <div class = "container2" >
+      
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="kosovo">Kosovo</option>
+        <option value="Albania">Albania</option>
+        <option value="North Macedonia">North Macedonia</option>
+        <option value="Greece">Greece</option>
+        <option value="Germany">Germany</option>
+        <option value="Italy">Italy</option>
+        <option value="Spain">Spain</option>
+      </select>
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+      <a onclick="contactbtn()"  > <input type="submit" value="submit"></a>  
+  
+    </div>
+  </div>
+  </form>
+<!--
+<script>
+  
+function contactbtn(){ 
+var name = document.getElementById('fname').value;
+var lastname = document.getElementById('lname').value;
+var subjekt = document.getElementById('subject').value;
+
+const regexName =  /^[A-Z]{1}.{2,15}$/;
+const regexLastName = /^[A-Z]{1}.{2,15}$/;
+const regexSubject = /^.{1,100}$/;
+
+  if(!regexName .test(name)){
+    alert("Write another name!");
+    return false;
+}
+else if(!regexLastName.test(lastname)){
+    alert("Write another LastName!");
+    return false;
+}
+else if(!regexSubject.test(subjekt)){
+    alert("Write another message!");
+    return false;
+}
+else{
+    alert("Mesazhi u dergua!");
+    return true;
+}
+}
+    </script>-->
+      
+     
+
+
+        <div class="footer2">
+            <div class = "contact">
+              <h1>Follow us on : Facebook  & Twitter & Instagram</h1>
+            </div>
+             <br>
+          
+             <div class="images">
+                <a href="https://www.facebook.com/drin.mehmeti.79" target ="_blank">
+                  <img src="../images/facebook1.png" alt="" width="100px"; height="100px">
+                </a>
+                <a href="https://www.twitter.com/GranitDemirii" target ="_blank">
+                  <img src="../images/twitter1.png" alt="" width="90px"; height="90px">
+                </a>
+                <a href="https://www.instagram.com/granitdemiri" target ="_blank">
+                  <img src="../images/instagram1.png" alt="" width="100px"; height="100px"> 
+                </a>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+  <body1>
+    <link rel="stylesheet" href="slider.css">
+      <?php
+  include("../html/header.html");
+  ?>
+  
+<body>
+
+    <link rel="stylesheet"  href="../css/style.css">
+    <link rel="stylesheet"  href="../css/about.css">
+
+</div>
+<div class="about-section" >
+ <div class ="inner-container">
+<h1>
+  About Us
+  <div class ="border"></div>
+
+</h1>
+<p class = "text">
+  Online Shop DG, Inc.është një nga kompanitë e Shërbimeve të Internetit me rritjen më të shpejtë në Evropë, dhe vazhdon të rritet në mënyrë eksponenciale vit pas viti. DG është kompani lidere e shitjes online, marketingut online, është platformë e cila konkretisht permban mbathjet me moderne. DG është gjithashtu një nga kompanitë më të financuara me produkte në Evropë.
+</p>
+
+
+
+
+
+
+
+ </div>
+
+
+
+
+</div>
+<div class="footer2">
+  <div class = "contact">
+    <h1>Follow us on : Facebook  & Twitter & Instagram</h1>
+  </div>
+   <br>
+   <div class="images">
+      <a href="https://www.facebook.com/drin.mehmeti.79" target ="_blank">
+        <img src="../images/facebook1.png" alt="" width="100px"; height="100px">
+      </a>
+      <a href="https://www.twitter.com/GranitDemirii" target ="_blank">
+        <img src="../images/twitter1.png" alt="" width="90px"; height="90px">
+      </a>
+      <a href="https://www.instagram.com/granitdemiri" target ="_blank">
+        <img src="../images/instagram1.png" alt="" width="100px"; height="100px"> 
+      </a>
+     </div>
+ </div>
+
+ 
+</div>
+
+
+
+</div>
+</body>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace("active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+         

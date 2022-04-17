@@ -1,0 +1,135 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-color: lightgray;
+
+
+}
+.about-section{
+    background-image: url(../Images/456789.jpeg) no-repeat left ;
+    background-size: 79;
+    background-color: white;
+    overflow: hidden;
+    padding: 100px 0;
+
+}
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: white;
+    padding: 150px;
+}
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30;
+    font-weight: 800;
+    
+}
+.border{
+    height:4px;
+    width: 100px;
+    background-color: rgb(245,60,28);
+}
+.text{
+    font-size: 13px;
+    color:#545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+button{
+    border:none;
+    padding: 8px 15px;
+    background-color: rgb(245,60,28);
+    color: #fff;
+}
+button:hover{
+    text-decoration: underline;
+
+}
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+@media screen and (max-width:1000px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+@media screen and (max-width:600px){
+    .about-section{
+        padding:0;
+
+    }
+    .inner-container{
+        padding: 60px;
+    }
+}
+
