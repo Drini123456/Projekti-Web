@@ -96,16 +96,16 @@ body {
                           <span onclick="register()">Register</span>
                           <hr id="Indicator">
                       </div>
-                      <form id="LoginForm">
-                          <input type="text" placeholder="Username" id="username-login">
-                          <input type="password"id="password-login" placeholder="Password">
+                      <form action="LoginAkont.php" id="LoginForm" method="POST">
+                          <input type="text" name="username"   placeholder="Username" id="username-login">
+                          <input type="password" name="password"  id="password-login" placeholder="Password">
                           <button type="submit" class="btn" onclick="Loginbtn()"    >Login</button>
                           <a href="">Forget password</a>
                       </form> 
-                      <form id="RegForm">
-                          <input type="text" placeholder="Username" id="Username" >
-                          <input type="email" placeholder="Email" id="email" >
-                          <input type="password" placeholder="Password" id="pass-reg">
+                      <form action="InsertAkont.php" id="RegForm" method="POST">
+                          <input type="text" name="username"  placeholder="username" id="username" >
+                          <input type="email" name="email"  placeholder="email" id="email" >
+                          <input type="password" name="password" placeholder="Password" id="pass-reg">
                           <button type="submit" class="btn" onclick="Registerbtn()" >Register</button>
                       </form>
                    </div>
@@ -137,7 +137,8 @@ body {
 
       
       </div>
-      <script>
+
+      <script> 
          var LoginForm=document.getElementById("LoginForm");
 var RegForm=document.getElementById("RegForm");
 var Indicator=document.getElementById("Indicator");
@@ -152,7 +153,8 @@ var Indicator=document.getElementById("Indicator");
         LoginForm.style.transform="translateX(400px)";
         Indicator.style.transform="translateX(0px)"
     }
-
+    </script>
+    <!--
 function Loginbtn(){
     var name = document.getElementById('username-login').value;
     var passwordL = document.getElementById('password-login').value;
@@ -200,4 +202,5 @@ function Registerbtn(){
     }
 }
       </script>
+    -->
       </body>
